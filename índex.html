@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AprovaTech | Pacote Definitivo de Recursos Digitais para Concursos e TI</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0B192C;
+            --secondary-color: #1E3E62;
+            --accent-color: #D4AF37; /* Dourado profissional */
+            --accent-green: #25D366; /* Verde WhatsApp */
+            --light-bg: #F8F9FA;
+            --text-dark: #333333;
+            --text-light: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #ffffff;
+            padding: 4rem 1.5rem 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            background-color: rgba(212, 175, 55, 0.2);
+            color: var(--accent-color);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            color: #d1d5db;
+            margin-bottom: 2rem;
+        }
+
+        /* Botões de Ação */
+        .btn-cta {
+            background-color: var(--accent-green);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-cta:hover {
+            background-color: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        /* Secções Gerais */
+        section {
+            padding: 4rem 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1rem;
+        }
+
+        /* Grelha de Conteúdos */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .category-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-card ul {
+            list-style: none;
+        }
+
+        .category-card li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .category-card li i {
+            color: var(--accent-color);
+            margin-top: 4px;
+        }
+
+        .category-card li:last-child {
+            border-bottom: none;
+        }
+
+        /* Benefícios */
+        .benefits-section {
+            background-color: #ffffff;
+            padding: 4rem 1.5rem;
+        }
+
+        .benefits-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .benefit-item i {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .benefit-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Caixa de Preço e Pagamento */
+        .pricing-box {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            max-width: 700px;
+            margin: 2rem auto;
+            box-shadow: 0 10px 30px rgba(11, 25, 44, 0.2);
+            border: 2px solid var(--accent-color);
+        }
+
+        .pricing-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin: 1.5rem 0;
+        }
+
+        .payment-methods {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+
+        .payment-methods h4 {
+            margin-bottom: 0.8rem;
+            color: var(--accent-color);
+            font-size: 1rem;
+        }
+
+        .payment-methods p {
+            font-size: 0.95rem;
+            margin-bottom: 0.4rem;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #07101a;
+            color: #9ca3af;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            font-size: 0.85rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Botão Flutuante para Mobile */
+        .floating-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--primary-color);
+            padding: 0.8rem 1rem;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .floating-cta span {
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .floating-cta .btn-small {
+            background-color: var(--accent-green);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            .floating-cta {
+                display: none; /* Esconde em computadores, foca no botão principal */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho / Hero Section -->
+    <header>
+        <div class="hero-container">
+            <span class="badge"><i class="fa-solid fa-bolt"></i> Acesso Imediato via WhatsApp</span>
+            <h1>O Pacote Definitivo de Recursos Digitais para Concursos e Gestão Profissional</h1>
+            <p>Aceda imediatamente a mais de 18 materiais exclusivos: simulados de TI, guias para concursos públicos, modelos de documentos oficiais e ferramentas em Excel prontas a usar.</p>
+            <a href="https://wa.me/244943109599?text=Olá!%20Quero%20comprar%20o%20Pacote%20Definitivo%20de%20Recursos%20Digitais." class="btn-cta" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Quero Garantir o Meu Pacote Agora
+            </a>
+        </div>
+    </header>
+
+    <!-- Secção de Conteúdo (Os 18 Recursos) -->
+    <section>
+        <h2 class="section-title">O Que Está Incluído no Pacote?</h2>
+        <p class="section-subtitle">Conteúdo estruturado e 100% editável para acelerar os seus estudos e a sua carreira.</p>
+
+        <div class="categories-grid">
+            <!-- Categoria A -->
+            <div class="category-card">
+                <h3><i class="fa-solid fa-graduation-cap"></i> Preparação & Concursos</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Simulado 1: Redes de Computadores e Protocolos (PDF + Gabarito)</li>
+                    <li><i class="fa-solid fa-check"></i> Simulado 2: Sistemas Operativos, Hardware e Manutenção</li>
+                    <li><i class="fa-solid fa-check"></i> Simulado 3: Bases de Dados (SQL) para Exames</li>
+                    <li><i class="fa-solid fa-check"></i> Simulado 4: Legislação Administrativa Geral</li>
+                    <li><i class="fa-solid fa-check"></i> Guia Prático: Noções de Direito Administrativo</li>
+                    <li><i class="fa-solid fa-check"></i> Banco de Questões: 100 Perguntas Frequentes para Técnico de TI</li>
+                    <li><i class="fa-solid fa-check"></i> Flashcards Digitais de Segurança da Informação</li>
+                </ul>
+            </div>
+
+            <!-- Categoria B -->
+            <div class="category-card">
+                <h3><i class="fa-solid fa-file-lines"></i> Minutas & Documentos</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Modelo de Requerimento Oficial (Minuta Editável)</li>
+                    <li><i class="fa-solid fa-check"></i> Curriculum Vitae Profissional (Layout Moderno)</li>
+                    <li><i class="fa-solid fa-check"></i> Carta de Apresentação Institucional</li>
+                    <li><i class="fa-solid fa-check"></i> Modelo de Procuração Pessoal / Administrativa</li>
+                    <li><i class="fa-solid fa-check"></i> Minuta de Contrato de Prestação de Serviços de TI</li>
+                    <li><i class="fa-solid fa-check"></i> Declaração de Prestação de Serviços para Freelancers</li>
+                </ul>
+            </div>
+
+            <!-- Categoria C -->
+            <div class="category-card">
+                <h3><i class="fa-solid fa-table"></i> Ferramentas em Excel</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Planilha de Gestão Financeira Pessoal Automática</li>
+                    <li><i class="fa-solid fa-check"></i> Planilha de Controlo de Stock e Equipamentos</li>
+                    <li><i class="fa-solid fa-check"></i> Cronograma de Estudos Diário para Concursos</li>
+                    <li><i class="fa-solid fa-check"></i> Calculadora e Estimador de Orçamentos de TI</li>
+                    <li><i class="fa-solid fa-check"></i> Modelo de Relatório Técnico de Informática</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção de Benefícios -->
+    <div class="benefits-section">
+        <section style="padding: 0 1.5rem;">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h4>Acesso Imediato</h4>
+                    <p>Receba todos os ficheiros diretamente no seu WhatsApp ou e-mail logo após a confirmação do pagamento.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <h4>100% Editável</h4>
+                    <p>Documentos em formatos Word e Excel totalmente adaptáveis aos seus dados pessoais e profissionais.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h4>Foco em Resultados</h4>
+                    <p>Materiais criados com base nas exigências reais de concursos públicos e do mercado de tecnologia.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Secção de Preço e Pagamento -->
+    <section>
+        <div class="pricing-box">
+            <h3>Oferta de Lançamento</h3>
+            <p>Tenha acesso vitalício a todos os 18 recursos digitais descritos acima.</p>
+            <div class="price-tag">Por Apenas [Inserir Preço]</div>
+            
+            <div class="payment-methods">
+                <h4><i class="fa-solid fa-wallet"></i> Dados para Pagamento Oficial:</h4>
+                <p><strong>Multicaixa Express:</strong> 943 109 599</p>
+                <p><strong>IBAN Bancário:</strong> 0006 0000 3496 7665 3010 9</p>
+                <p style="margin-top: 10px; font-size: 0.85rem; color: #e2e8f0;">* Após efetuar o pagamento, envie o comprovativo para o nosso WhatsApp para receber o link de descarga imediata.</p>
+            </div>
+
+            <a href="https://wa.me/244943109599?text=Olá!%20Eis%20o%20meu%20comprovativo%20para%20receber%20o%20Pacote%20Digital." class="btn-cta" target="_blank" style="margin-top: 1rem;">
+                <i class="fa-brands fa-whatsapp"></i> Enviar Comprovativo via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p><strong>AprovaTech</strong> — Todos os direitos reservados.</p>
+        <p>Suporte ao Cliente via WhatsApp: <strong>943 109 599</strong></p>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">Termos de Utilização & Política de Privacidade</p>
+    </footer>
+
+    <!-- Botão Flutuante Otimizado para Telemóveis -->
+    <div class="floating-cta">
+        <span><i class="fa-solid fa-shield-halved" style="color: var(--accent-color);"></i> Pacote Completo (18 Itens)</span>
+        <a href="https://wa.me/244943109599?text=Olá!%20Quero%20comprar%20o%20Pacote%20Digital." class="btn-small" target="_blank">Comprar Já</a>
+    </div>
+
+</body>
+</html>
